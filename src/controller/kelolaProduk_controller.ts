@@ -67,7 +67,7 @@ const KelolaProdukController = {
             })
 
             return res.status(200).json({
-                status: 201,
+                status: 200,
                 message: "Kelolaproduk created successfully",
                 kelolaproduk: kelolaproduk
             })

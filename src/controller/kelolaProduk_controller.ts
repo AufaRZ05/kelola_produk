@@ -5,7 +5,11 @@ const KelolaProdukController = {
     index: async (req: Request, res: Response) => {
         try {
             const userId = req.query.userId
-            const kelolaproduk = await Kelolaproduk
+            const kelolaproduk = await Kelolaproduk.findAll({
+                where: {
+                    userId: userId
+                }
+            })
 
             return res.status(200).json({
                 status: 200,
